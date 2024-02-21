@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  beap:
+    image: mysql:8.0.33
+    volumes:
+      - beap:/var/lib/mysql
+      - ./config/mysql:/etc/mysql/conf.d
+    environment:
+      MYSQL_ROOT_PASSWORD: wh66wRWahj32Xs4yiVhgKm
+      MYSQL_DATABASE: beap
+      MYSQL_ALLOW_EMPTY_PASSWORD: ""  # Corrected line
+      MYSQL_PASSWORD: k8tIQXzIawnwyhnNU98e4u
+    ports:
+      - "127.0.0.1:3307:3306"
+    command: --bind-address=0.0.0.0
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  beap:

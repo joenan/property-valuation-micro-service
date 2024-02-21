@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: Report-Service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/beap?serverTimeZone=UTC
+    username: root
+    password: wh66wRWahj32Xs4yiVhgKm
+    hikari:
+      connection-test-query: SELECT 1
+      minimum-idle: 5
+      maximum-pool-size: 15
+      idle-timeout: 30000
+      pool-name: HikariCP
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate: org.hibernate.dialect.MySQLDialect
+
+com:
+  auth:
+    jwtSecret: microServiceSecretKey
+    jwtExpirationMs: 86400000
+
+
+server:
+  port: 9092
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+    preferIpAddress: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        exclude: "*"
