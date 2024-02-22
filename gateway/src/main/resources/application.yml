@@ -1,4 +1,11 @@
 spring:
+  cloud:
+    gateway:
+      httpclient:
+        proxy:
+          host: localhost
+          port: 4200
+
   application:
     name: Gateway-Service
   main:
