@@ -3,16 +3,6 @@ spring:
     name: Gateway-Service
   main:
     web-application-type: reactive
-  cloud:
-    gateway:
-      enabled: true
-      globalcors:
-        cors-configurations:
-          allowed-origins: '*'
-          allowed-methods: '*'
-          allowed-headers: '*'
-          exposed-headers: 'Authorization,Link,X-Total-Count'
-          allow-credentials: true
 
 eureka:
   client:
