@@ -1,7 +1,7 @@
 package com.mcb.uploads.repository;
 
 
-import com.mcb.uploads.entities.User;
+import com.mcb.commons.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,8 +1,8 @@
 package com.mcb.uploads.service;
 
+import com.mcb.commons.entities.FileUpload;
+import com.mcb.commons.enums.DocumentType;
 import com.mcb.uploads.dto.FileUploadDto;
-import com.mcb.uploads.entities.FileUpload;
-import com.mcb.uploads.enums.DocumentType;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;

@@ -23,8 +23,16 @@
         <jakarta.xml.bind.api.version>4.0.1</jakarta.xml.bind.api.version>
         <jaxb.api.version>2.3.1</jaxb.api.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
+        <commons.version>0.0.1-SNAPSHOT</commons.version>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.mcb.commons</groupId>
+            <artifactId>commons</artifactId>
+            <version>${commons.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>

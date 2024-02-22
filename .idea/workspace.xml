@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63c5d49e-3761-44b5-920b-6c094c623ca9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/AuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/entities/ERole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/entities/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/exception/ResourceAlreadyExistException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/mcb/auth/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beap/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/BeapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/ApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/controller/FacilityDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/controller/FacilityDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/controller/PropertyValuationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/controller/PropertyValuationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/converter/CommentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/converter/CommentConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/converter/CustomerConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/converter/CustomerConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/converter/FacilityDetailsConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/converter/FacilityDetailsConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/converter/PropertyValuationConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/converter/PropertyValuationConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/converter/UserConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/converter/UserConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/dto/CommentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/dto/CustomerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/dto/FacilityDetailsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/dto/PropertyValuationDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/dto/ValuationProjection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/dto/request/PropertyValuationRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/ERole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/FacilityDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/FileUpload.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/PropertyValuation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/PropertyValuationBorrowers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/enums/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/enums/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/enums/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/enums/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/enums/DocumentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/enums/DocumentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/enums/EvaluationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/enums/EvaluationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/enums/FacilityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/enums/FacilityType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/enums/Purpose.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/enums/Purpose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/exception/ResourceAlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/exception/ResourceAlreadyExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/mcb/commons/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/repository/FacilityDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/repository/FacilityDetailsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/repository/FileUploadRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/repository/FileUploadRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/repository/PropertyValuationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/repository/PropertyValuationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/security/jwt/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/FacilityDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/FacilityDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/FileUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/FileUploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/PropertyValuationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/PropertyValuationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/impl/FacilityDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/impl/FacilityDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/impl/FileUploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/impl/FileUploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/impl/PropertyValuationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/impl/PropertyValuationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/main/java/com/mcb/bpea/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/test/java/com/mcb/bpea/BeapApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/test/java/com/mcb/app/ApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/test/java/com/mcb/bpea/services/CommentServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/test/java/com/mcb/app/services/CommentServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/test/java/com/mcb/bpea/services/CustomerServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/test/java/com/mcb/app/services/CustomerServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/test/java/com/mcb/bpea/services/FacilityDetailsServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/test/java/com/mcb/app/services/FacilityDetailsServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beap/src/test/java/com/mcb/bpea/services/FileUploadServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/test/java/com/mcb/app/services/FileUploadServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/UploadsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/UploadsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/controller/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/controller/FileUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/dto/FileUploadDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/dto/FileUploadDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/entities/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/entities/ERole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/entities/FacilityDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/entities/FileUpload.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/entities/PropertyValuation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/entities/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/enums/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/enums/Currency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/enums/DocumentType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/enums/FacilityType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/exception/ResourceAlreadyExistException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/repository/FileUploadRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/repository/FileUploadRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/service/FileUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/service/FileUploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/service/impl/FileUploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fileuploads/src/main/java/com/mcb/uploads/service/impl/FileUploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/settings/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/SettingsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/SettingsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/controller/CurrencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/controller/FacilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/controller/FacilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/controller/PropertyValuationPurposeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/controller/PropertyValuationPurposeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/controller/ValuationTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/controller/ValuationTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/Currency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/ERole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/Facility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/PropertyValuationPurpose.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/entities/ValuationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/exception/ResourceAlreadyExistException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/repository/CurrencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/repository/CurrencyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/repository/FacilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/repository/FacilityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/repository/PropertyValuationPurposeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/repository/PropertyValuationPurposeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/repository/ValuationTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/repository/ValuationTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/security/jwt/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/beap/src/main/java/com/mcb/app/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/CurrencyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/PropertyValuationPurposeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/PropertyValuationPurposeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/ValuationTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/ValuationTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/impl/CurrencyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/impl/CurrencyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/impl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/impl/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/impl/PropertyValuationPurposeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/impl/PropertyValuationPurposeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/main/java/com/mcb/bpea/service/impl/ValuationTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/main/java/com/mcb/app/service/impl/ValuationTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/test/java/com/mcb/bpea/SettingsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/test/java/com/mcb/app/SettingsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/test/java/com/mcb/bpea/service/CategoryServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/test/java/com/mcb/app/service/CategoryServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/test/java/com/mcb/bpea/service/CurrencyServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/test/java/com/mcb/app/service/CurrencyServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/test/java/com/mcb/bpea/service/FacilityServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/test/java/com/mcb/app/service/FacilityServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/src/test/java/com/mcb/bpea/service/PropertyValuationPurposeServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/settings/src/test/java/com/mcb/app/service/PropertyValuationPurposeServiceImplTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2ciMgbPCWYuQbVU80Kx4OsTcYev" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ZBOOK 15 G3/Documents/property-valuation-micro-service/commons/src/main/java/com/mcb/commons/entities",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ZBOOK 15 G3\Documents\property-valuation-micro-service\commons\src\main\java\com\mcb\commons\entities" />
+      <recent name="C:\Users\ZBOOK 15 G3\Documents\property-valuation-micro-service\commons\src\main\java\com\mcb\commons\entities\entities" />
+      <recent name="C:\Users\ZBOOK 15 G3\Documents\property-valuation-micro-service\reports\src\main\java\com\mcb\reports\enums" />
+      <recent name="C:\Users\ZBOOK 15 G3\Documents\property-valuation-micro-service\reports\src\main\java\com\mcb\reports\entities" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mcb.reports.service.impl" />
+      <recent name="com.mcb.reports.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mcb.reports.entities.views" />
+      <recent name="com.mcb.reports.entities" />
+      <recent name="com.mcb.reports.enums" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UploadsApplication">
+    <configuration name="CategoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="settings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcb.app.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mcb.bpea.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mcb.app.service.CategoryServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="settings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcb.app.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mcb.bpea.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mcb.app.service.CurrencyServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FacilityServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="settings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcb.app.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mcb.bpea.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mcb.app.service.FacilityServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PropertyValuationPurposeServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="settings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcb.app.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mcb.bpea.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mcb.app.service.PropertyValuationPurposeServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.app.ApiApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mcb.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.auth.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="commons" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.commons.commons.CommonsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.gateway.Gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="reports" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.reports.ReportApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.server.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="settings" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.app.SettingsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="ACCESS_KEY_ID" value="AKIATCKATWEJYNQUTJ5Y" />
+        <env name="S3_BUCKET_NAME" value="mcb2024" />
+        <env name="S3_REGION" value="eu-north-1" />
+        <env name="SECRET_ACCESS_KEY" value="mK4mr7rvt7vag/xc++up0hl9SJVoHvbaQcvSaqx8" />
+      </envs>
+      <module name="fileuploads" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mcb.uploads.UploadsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.CategoryServiceImplTest" />
+      <item itemvalue="JUnit.CurrencyServiceImplTest" />
+      <item itemvalue="JUnit.FacilityServiceImplTest" />
+      <item itemvalue="JUnit.PropertyValuationPurposeServiceImplTest" />
+      <item itemvalue="Spring Boot.CommonsApplication" />
+      <item itemvalue="Spring Boot.AuthApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.ReportApplication" />
+      <item itemvalue="Spring Boot.ServerApplication" />
+      <item itemvalue="Spring Boot.SettingsApplication" />
+      <item itemvalue="Spring Boot.UploadsApplication" />
+      <item itemvalue="Spring Boot.ApiApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ApiApplication" />
+        <item itemvalue="JUnit.PropertyValuationPurposeServiceImplTest" />
+        <item itemvalue="JUnit.FacilityServiceImplTest" />
+        <item itemvalue="JUnit.CurrencyServiceImplTest" />
+        <item itemvalue="JUnit.CategoryServiceImplTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63c5d49e-3761-44b5-920b-6c094c623ca9" name="Changes" comment="" />
+      <created>1708590057553</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708590057553</updated>
+      <workItem from="1708590064525" duration="15984000" />
+      <workItem from="1708608823072" duration="603000" />
+      <workItem from="1708609626251" duration="22000" />
+      <workItem from="1708609660696" duration="6785000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

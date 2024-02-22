@@ -1,7 +1,7 @@
 package com.mcb.uploads.security.services;
 
 
-import com.mcb.uploads.entities.User;
+import com.mcb.commons.entities.User;
 import com.mcb.uploads.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

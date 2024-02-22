@@ -1,8 +1,9 @@
 package com.mcb.auth.repository;
 
 
-import com.mcb.auth.entities.ERole;
-import com.mcb.auth.entities.Role;
+
+import com.mcb.commons.entities.ERole;
+import com.mcb.commons.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

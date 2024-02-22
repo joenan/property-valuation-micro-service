@@ -1,6 +1,7 @@
 package com.mcb.auth.repository;
 
-import com.mcb.auth.entities.User;
+
+import com.mcb.commons.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

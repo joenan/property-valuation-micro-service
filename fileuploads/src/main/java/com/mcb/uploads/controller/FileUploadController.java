@@ -1,9 +1,9 @@
 package com.mcb.uploads.controller;
 
 
+import com.mcb.commons.entities.FileUpload;
+import com.mcb.commons.enums.DocumentType;
 import com.mcb.uploads.dto.FileUploadDto;
-import com.mcb.uploads.entities.FileUpload;
-import com.mcb.uploads.enums.DocumentType;
 import com.mcb.uploads.service.FileUploadService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;

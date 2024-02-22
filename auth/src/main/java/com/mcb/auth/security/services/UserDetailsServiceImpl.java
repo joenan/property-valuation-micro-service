@@ -1,7 +1,8 @@
 package com.mcb.auth.security.services;
 
-import com.mcb.auth.entities.User;
+
 import com.mcb.auth.repository.UserRepository;
+import com.mcb.commons.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

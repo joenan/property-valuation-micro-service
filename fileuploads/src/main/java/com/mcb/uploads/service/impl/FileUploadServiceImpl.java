@@ -6,10 +6,10 @@ import com.amazonaws.services.s3.model.PutObjectResult;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 import com.amazonaws.util.IOUtils;
+import com.mcb.commons.entities.FileUpload;
+import com.mcb.commons.entities.User;
+import com.mcb.commons.enums.DocumentType;
 import com.mcb.uploads.dto.FileUploadDto;
-import com.mcb.uploads.entities.FileUpload;
-import com.mcb.uploads.entities.User;
-import com.mcb.uploads.enums.DocumentType;
 import com.mcb.uploads.repository.FileUploadRepository;
 import com.mcb.uploads.repository.UserRepository;
 import com.mcb.uploads.service.FileUploadService;
@@ -62,7 +62,6 @@ public class FileUploadServiceImpl implements FileUploadService {
                     .documentType(documentType)
                     .fileSize(file.getSize())
                     .fileName(modifiedName)
-                    .url(s3Url)
                     .uploadedBy(user)
                     .uploadedDate(LocalDateTime.now(ZoneOffset.UTC))
                     .build();
