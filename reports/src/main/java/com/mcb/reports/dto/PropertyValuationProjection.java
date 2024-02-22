@@ -1,5 +1,4 @@
-package com.mcb.reports.entities;
-
+package com.mcb.reports.dto;
 
 import lombok.*;
 
@@ -10,7 +9,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class ValuationRequests {
+public class PropertyValuationProjection {
+
     private Long id;
     private String reference;
     private LocalDateTime receivedOn;

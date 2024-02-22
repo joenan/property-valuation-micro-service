@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>beap</name>
     <description>A bank property evaluation application</description>
+
     <properties>
         <java.version>21</java.version>
         <lombok.version>1.18.30</lombok.version>
