@@ -1,5 +1,8 @@
 package com.mcb.commons.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum Category {
     APARTMENT(25000, "Apartment"),
     PBWM_HOUSING(25010, "PBWM Housing");

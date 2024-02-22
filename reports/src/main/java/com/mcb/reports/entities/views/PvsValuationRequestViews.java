@@ -23,6 +23,4 @@ public class PvsValuationRequestViews {
     private String fosRef;
     private LocalDateTime createdOn;
     private LocalDateTime modifiedOn;
-
- 
 }

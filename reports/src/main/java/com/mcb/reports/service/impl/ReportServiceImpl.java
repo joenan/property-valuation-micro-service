@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +18,23 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public List<PvsValuationRequestViews> searchPropertyValuations(String reference, LocalDateTime createdAt, String fosRef) {
-        return propertyValuationRepository.findCustomProjection(reference, createdAt, fosRef);
+
+        List<Object[]> result = propertyValuationRepository.findCustomProjection(reference, createdAt, fosRef);
+
+        List<PvsValuationRequestViews> pvsValuationRequestViewsList = result.stream()
+                .map(row -> {
+                    PvsValuationRequestViews pvsValuationRequestViews = new PvsValuationRequestViews();
+                    pvsValuationRequestViews.setId((Long) row[0]);
+                    pvsValuationRequestViews.setReference((String) row[1]);
+                    pvsValuationRequestViews.setReceivedOn((LocalDateTime) row[2]);
+                    pvsValuationRequestViews.setBorrowersName((String) row[3]);
+                    pvsValuationRequestViews.setFosRef((String) row[4]);
+                    pvsValuationRequestViews.setCreatedOn((LocalDateTime) row[5]);
+                    pvsValuationRequestViews.setModifiedOn((LocalDateTime) row[6]);
+                    return pvsValuationRequestViews;
+                })
+                .toList();
+
+        return pvsValuationRequestViewsList;
     }
 }

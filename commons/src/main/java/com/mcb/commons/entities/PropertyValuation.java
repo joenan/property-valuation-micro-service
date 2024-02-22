@@ -11,6 +11,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -29,11 +30,11 @@ public class PropertyValuation implements Serializable {
     private Long id;
     @Enumerated(EnumType.STRING)
     private FacilityType facilityType;
-    private String category;
-    private String purpose;
+    private com.mcb.commons.enums.Category category;
+    private Purpose purpose;
     private int termMonths;
     private com.mcb.commons.enums.Currency currency;
-    private double amount;
+    private BigDecimal amount;
     private String fosReference;
     private String reference;
     private EvaluationType evaluationType;

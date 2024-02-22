@@ -19,7 +19,7 @@ public interface PropertyValuationRepository extends JpaRepository<PvsValuationR
             "WHERE (:referenceParam IS NULL OR pv.reference = :referenceParam) " +
             "AND (:createdAtParam IS NULL OR pv.createdAt = :createdAtParam) " +
             "AND (:fosRefParam IS NULL OR pv.fosReference = :fosRefParam)")
-    List<PvsValuationRequestViews> findCustomProjection(
+    List<Object[]> findCustomProjection(
             @Param("referenceParam") String referenceParam,
             @Param("createdAtParam") LocalDateTime createdAtParam,
             @Param("fosRefParam") String fosRefParam

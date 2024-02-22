@@ -10,6 +10,7 @@ import com.mcb.commons.dto.PropertyValuationDto;
 import com.mcb.commons.entities.Customer;
 import com.mcb.commons.entities.FacilityDetails;
 import com.mcb.commons.entities.PropertyValuation;
+import com.mcb.commons.enums.EvaluationType;
 import com.mcb.commons.exception.ResourceNotFoundException;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
@@ -63,9 +64,9 @@ public class PropertyValuationServiceImpl implements PropertyValuationService {
     }
 
     @Override
-    public PropertyValuationDto getPropertyValuationByType(String facilityType) {
-        PropertyValuation propertyValuation = propertyValuationRepository.findByEvaluationType(facilityType)
-                .orElseThrow(() -> new ResourceNotFoundException("Property valuation with type " + facilityType + " not found"));
+    public PropertyValuationDto getPropertyValuationByType(EvaluationType type) {
+        PropertyValuation propertyValuation = propertyValuationRepository.findByEvaluationType(type)
+                .orElseThrow(() -> new ResourceNotFoundException("Property valuation with type " + type + " not found"));
         return valuationConverter.toPropertyValuationDto(propertyValuation);
     }
 

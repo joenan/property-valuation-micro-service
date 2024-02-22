@@ -3,6 +3,7 @@ package com.mcb.app.controller;
 
 import com.mcb.app.service.PropertyValuationService;
 import com.mcb.commons.dto.PropertyValuationDto;
+import com.mcb.commons.enums.EvaluationType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,8 +23,8 @@ public class PropertyValuationController {
     }
 
     @GetMapping("/facility/{facilityType}")
-    public PropertyValuationDto getPropertyValuationByType(@PathVariable String facilityType) {
-        return propertyValuationService.getPropertyValuationByType(facilityType);
+    public PropertyValuationDto getPropertyValuationByType(@PathVariable EvaluationType propertyValuation) {
+        return propertyValuationService.getPropertyValuationByType(propertyValuation);
     }
 
     @GetMapping("/{id}")

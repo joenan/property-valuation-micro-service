@@ -1,5 +1,8 @@
 package com.mcb.commons.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum DocumentType {
     TITLE_DEED,
     NATIONAL_IDENTITY_CARD,

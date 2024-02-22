@@ -1,10 +1,11 @@
 package com.mcb.commons.dto;
 
 
-import com.mcb.commons.enums.FacilityType;
+import com.mcb.commons.enums.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -16,14 +17,14 @@ public class PropertyValuationDto implements Serializable {
 
     private Long id;
     private FacilityType facilityType;
-    private String category;
-    private int purpose;
+    private Category category;
+    private Purpose purpose;
     private int termMonths;
-    private String currency;
-    private double amount;
+    private Currency currency;
+    private BigDecimal amount;
     private String fosReference;
     private String reference;
-    private String evaluationType;
+    private EvaluationType evaluationType;
     private List<CustomerDto> borrowers;
     private FacilityDetailsDto facilityDetails;
 }
