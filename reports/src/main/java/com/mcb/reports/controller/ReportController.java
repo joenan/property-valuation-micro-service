@@ -12,13 +12,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/property-valuations")
+@RequestMapping("/reports/")
 @RequiredArgsConstructor
 public class ReportController {
 
     private final ReportService reportService;
 
-    @GetMapping("/search")
+    @GetMapping("/pvs-valuation-request")
     public List<PvsValuationRequestViews> searchPropertyValuations(
             @RequestParam(name = "reference", required = false) String reference,
             @RequestParam(name = "createdAt", required = false) LocalDateTime createdAt,
