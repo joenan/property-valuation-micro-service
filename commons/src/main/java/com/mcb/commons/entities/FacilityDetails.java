@@ -4,6 +4,7 @@ package com.mcb.commons.entities;
 import com.mcb.commons.enums.Category;
 import com.mcb.commons.enums.Currency;
 import com.mcb.commons.enums.FacilityType;
+import com.mcb.commons.enums.Purpose;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,7 +27,7 @@ public class FacilityDetails {
     private FacilityType facilityType;
     @Enumerated(EnumType.STRING)
     private Category category;
-    private String purposeOfPropertyValuation;
+    private Purpose purposeOfPropertyValuation;
     private int termInMonths;
     @Enumerated(EnumType.STRING)
     private Currency currency;
