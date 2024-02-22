@@ -37,8 +37,8 @@ public class FileUploadServiceImpl implements FileUploadService {
 
     private final AmazonS3 amazonS3;
 
-    @Value("aws.s3.bucket.name")
-    private static String BUCKET_NAME;
+    @Value("${aws.s3.bucket.name}")
+    private String BUCKET_NAME;
 
     private final UserRepository userRepository;
 
@@ -80,8 +80,7 @@ public class FileUploadServiceImpl implements FileUploadService {
     @Override
     public byte[] download(String fileName) {
         try {
-
-            S3Object s3Object = amazonS3.getObject(BUCKET_NAME, "solar 3.png");
+            S3Object s3Object = amazonS3.getObject(BUCKET_NAME, fileName);
             S3ObjectInputStream inputStream = s3Object.getObjectContent();
 
             // Read the file content into a byte array

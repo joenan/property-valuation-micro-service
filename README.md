@@ -42,6 +42,7 @@ This repository contains a set of Spring Boot microservices for Property Valuati
     docker build -t settings-service ./settings
     docker build -t reports-service ./reports
     docker build -t valuation-service ./valuation
+    docker build -t upload-service ./upload
     ```
 
 5. Run the microservices using Docker:
@@ -52,6 +53,7 @@ This repository contains a set of Spring Boot microservices for Property Valuati
     docker run -it -p 9093:9093 settings-service
     docker run -it -p 9092:9092 reports-service
     docker run -it -p 9094:9094 valuation-service
+    docker run -it -p 9095:9095 valuation-service
     ```
 
    These commands will pull the necessary Docker images, build the microservices, and run the containers.
