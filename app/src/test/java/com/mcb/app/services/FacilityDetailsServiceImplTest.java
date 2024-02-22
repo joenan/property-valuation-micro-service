@@ -7,6 +7,7 @@ import com.mcb.commons.entities.FacilityDetails;
 import com.mcb.commons.enums.Category;
 import com.mcb.commons.enums.Currency;
 import com.mcb.commons.enums.FacilityType;
+import com.mcb.commons.enums.Purpose;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -106,10 +107,11 @@ class FacilityDetailsServiceImplTest {
                 .id(1L)
                 .facilityType(FacilityType.ON_REVOLVING)
                 .category(Category.APARTMENT)
-                .purposeOfPropertyValuation("Sample purpose")
+                .purposeOfPropertyValuation(Purpose.CONSTRUCTION.name())
                 .termInMonths(12)
                 .currency(Currency.EUR)
                 .amount(BigDecimal.valueOf(100000))
                 .build();
     }
+
 }
