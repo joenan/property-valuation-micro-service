@@ -1,7 +1,9 @@
 package com.mcb.commons.entities;
 
 
+import com.mcb.commons.enums.EvaluationType;
 import com.mcb.commons.enums.FacilityType;
+import com.mcb.commons.enums.Purpose;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -28,13 +30,13 @@ public class PropertyValuation implements Serializable {
     @Enumerated(EnumType.STRING)
     private FacilityType facilityType;
     private String category;
-    private int purpose;
+    private String purpose;
     private int termMonths;
-    private String currency;
+    private com.mcb.commons.enums.Currency currency;
     private double amount;
     private String fosReference;
     private String reference;
-    private String evaluationType;
+    private EvaluationType evaluationType;
 
     @CreatedDate
     @Column(name = "created_at", updatable = false)

@@ -27,7 +27,7 @@ public class FacilityDetails {
     private FacilityType facilityType;
     @Enumerated(EnumType.STRING)
     private Category category;
-    private Purpose purposeOfPropertyValuation;
+    private String purposeOfPropertyValuation;
     private int termInMonths;
     @Enumerated(EnumType.STRING)
     private Currency currency;
