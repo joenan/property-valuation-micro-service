@@ -1,6 +1,6 @@
 package com.mcb.reports.controller;
 
-import com.mcb.reports.dto.PropertyValuationProjection;
+import com.mcb.reports.entities.views.PvsValuationRequestViews;
 import com.mcb.reports.service.ReportService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ public class ReportController {
     private final ReportService reportService;
 
     @GetMapping("/search")
-    public List<PropertyValuationProjection> searchPropertyValuations(
+    public List<PvsValuationRequestViews> searchPropertyValuations(
             @RequestParam(name = "reference", required = false) String reference,
             @RequestParam(name = "createdAt", required = false) LocalDateTime createdAt,
             @RequestParam(name = "fosRef", required = false) String fosRef) {
