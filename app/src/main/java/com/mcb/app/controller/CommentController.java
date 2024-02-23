@@ -15,7 +15,6 @@ public class CommentController {
 
     private final CommentService commentService;
 
-
     @PostMapping
     public CommentDto saveComment(@RequestBody CommentDto comment) {
         return commentService.saveComment(comment);
@@ -30,6 +29,7 @@ public class CommentController {
     public List<CommentDto> getAllCommentsByUser(@PathVariable String username) {
         return commentService.getAllCommentsByUser(username);
     }
+
     @GetMapping
     public List<CommentDto> getAllComments(
             @RequestParam(defaultValue = "0") int page,

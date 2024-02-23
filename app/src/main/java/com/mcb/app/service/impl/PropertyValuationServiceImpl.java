@@ -43,22 +43,30 @@ public class PropertyValuationServiceImpl implements PropertyValuationService {
     private final EntityManager entityManager;
 
     @Override
-    public PropertyValuationDto savePropertyValuation(PropertyValuationDto propertyValuationDto) {
+    public PropertyValuationDto savePropertyValuation(PropertyValuationDto request) {
 
 
-        List<Customer> borrowers = propertyValuationDto.getBorrowers().stream()
+        List<Customer> borrowers = request.getBorrowers().stream()
                 .map(customerConverter::toCustomer)
                 .collect(Collectors.toList());
 
-        FacilityDetails facilityDetails = facilityDetailsConverter.toFacilityDetails(propertyValuationDto.getFacilityDetails());
-        facilityDetailsRepository.save(facilityDetails);
+        FacilityDetails facilityDetails = new FacilityDetails();
 
-
-        PropertyValuation propertyValuation = valuationConverter.toPropertyValuation(propertyValuationDto);
+        PropertyValuation propertyValuation = valuationConverter.toPropertyValuation(request);
         propertyValuation.setBorrowers(borrowers);
         propertyValuation.setFosReference(generatePofReference());
         propertyValuation.setReference(generateReference());
         propertyValuation.setFacilityDetails(facilityDetails);
+
+
+        facilityDetails.setPurposeOfPropertyValuation(request.getPurpose());
+        facilityDetails.setAmount(request.getAmount());
+        facilityDetails.setFacilityType(request.getFacilityType());
+        facilityDetails.setCategory(request.getCategory());
+        facilityDetails.setPropertyValuation(propertyValuation);
+        facilityDetails.setTermInMonths(request.getTermMonths());
+
+        facilityDetailsRepository.save(facilityDetails);
 
         return valuationConverter.toPropertyValuationDto(propertyValuationRepository.save(propertyValuation));
     }

@@ -4,6 +4,7 @@ package com.mcb.app.controller;
 import com.mcb.app.service.PropertyValuationService;
 import com.mcb.commons.dto.PropertyValuationDto;
 import com.mcb.commons.enums.EvaluationType;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class PropertyValuationController {
     private final PropertyValuationService propertyValuationService;
 
     @PostMapping
-    public PropertyValuationDto savePropertyValuation(@RequestBody PropertyValuationDto propertyValuation) {
+    public PropertyValuationDto savePropertyValuation(@RequestBody @Valid PropertyValuationDto propertyValuation) {
         return propertyValuationService.savePropertyValuation(propertyValuation);
     }
 
