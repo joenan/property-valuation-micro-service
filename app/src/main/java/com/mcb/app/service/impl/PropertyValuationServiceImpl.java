@@ -1,7 +1,6 @@
 package com.mcb.app.service.impl;
 
 import com.mcb.app.converter.CustomerConverter;
-import com.mcb.app.converter.FacilityDetailsConverter;
 import com.mcb.app.converter.PropertyValuationConverter;
 import com.mcb.app.repository.FacilityDetailsRepository;
 import com.mcb.app.repository.PropertyValuationRepository;
@@ -12,7 +11,6 @@ import com.mcb.commons.entities.FacilityDetails;
 import com.mcb.commons.entities.PropertyValuation;
 import com.mcb.commons.enums.EvaluationType;
 import com.mcb.commons.exception.ResourceNotFoundException;
-import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -37,10 +35,6 @@ public class PropertyValuationServiceImpl implements PropertyValuationService {
     private final PropertyValuationConverter valuationConverter;
 
     private final CustomerConverter customerConverter;
-
-    private final FacilityDetailsConverter facilityDetailsConverter;
-
-    private final EntityManager entityManager;
 
     @Override
     public PropertyValuationDto savePropertyValuation(PropertyValuationDto request) {
