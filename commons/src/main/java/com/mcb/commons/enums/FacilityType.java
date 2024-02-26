@@ -4,5 +4,5 @@ import lombok.Getter;
 
 @Getter
 public enum FacilityType {
-    REVOLVING, ON_REVOLVING;
+    REVOLVING, NON_REVOLVING;
 }
