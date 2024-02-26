@@ -11,6 +11,7 @@ import com.mcb.commons.entities.PropertyValuation;
 import com.mcb.commons.entities.User;
 import com.mcb.commons.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.Comments;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -64,6 +65,14 @@ public class CommentServiceImpl implements CommentService {
     public List<CommentDto> getAllCommentsByUser(String username) {
         List<Comment> commentsByUser = commentRepository.findAllByUserUsername(username);
         return commentsByUser.stream()
+                .map(commentConverter::toCommentDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<CommentDto> getCommentByPropertyId(Long propertyId) {
+        List<Comment> commentsByProperties = commentRepository.findAllByPropertyValuationId(propertyId);
+        return commentsByProperties.stream()
                 .map(commentConverter::toCommentDto)
                 .collect(Collectors.toList());
     }

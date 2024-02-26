@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface FileUploadService {
     FileUploadDto getFileUploadById(Long id);
-    List<FileUpload> getAllFileUploads();
+    List<FileUploadDto> getAllFileUploads();
     void deleteFileUpload(Long id);
     FileUploadDto uploadFile(MultipartFile file,
                              DocumentType documentType,
@@ -18,4 +18,6 @@ public interface FileUploadService {
                              String username);
 
     byte[] download(String fileName);
+
+    List<FileUploadDto> getAllFileUploadsByUserNameAndPropertyId(String username, Long propertyId);
 }

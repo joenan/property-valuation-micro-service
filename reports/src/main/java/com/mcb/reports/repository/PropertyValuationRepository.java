@@ -10,15 +10,15 @@ import java.util.List;
 
 public interface PropertyValuationRepository extends JpaRepository<PvsValuationRequestViews, Long> {
 
-    @Query("SELECT pv.id AS id, pv.reference AS reference, pv.createdAt AS receivedOn, " +
-            "c.shortName AS borrowersName, pv.fosReference AS fosRef, pv.createdAt AS createdOn, " +
-            "pv.updatedAt AS modifiedOn " +
-            "FROM PropertyValuation pv " +
-            "JOIN PropertyValuationBorrowers pvb ON pv.id = pvb.propertyValuation.id " +
-            "JOIN Customer c ON pvb.borrower.id = c.id " +
+    @Query(value = "SELECT pv.id AS id, pv.reference AS reference, pv.created_at AS receivedOn, " +
+            "c.short_name AS borrowersName, pv.fos_reference AS fosRef, pv.created_at AS createdOn, " +
+            "pv.updated_at AS modifiedOn " +
+            "FROM property_valuation pv " +
+            "JOIN property_valuation_borrowers pvb ON pv.id = pvb.property_valuation_id " +
+            "JOIN customers c ON pvb.borrowers_id = c.id " +
             "WHERE (:referenceParam IS NULL OR pv.reference = :referenceParam) " +
-            "AND (:createdAtParam IS NULL OR pv.createdAt = :createdAtParam) " +
-            "AND (:fosRefParam IS NULL OR pv.fosReference = :fosRefParam)")
+            "AND (:createdAtParam IS NULL OR pv.created_at = :createdAtParam) " +
+            "AND (:fosRefParam IS NULL OR pv.fos_reference = :fosRefParam)", nativeQuery = true)
     List<Object[]> findCustomProjection(
             @Param("referenceParam") String referenceParam,
             @Param("createdAtParam") LocalDateTime createdAtParam,

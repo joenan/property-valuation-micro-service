@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "file_uploads")
 @Setter
 @Getter
 @NoArgsConstructor

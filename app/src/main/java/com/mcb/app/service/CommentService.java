@@ -10,4 +10,5 @@ public interface CommentService {
     void deleteComment(Long id);
     List<CommentDto> getAllComments(int page, int size);
     List<CommentDto> getAllCommentsByUser(String username);
+    List<CommentDto> getCommentByPropertyId(Long propertyId);
 }

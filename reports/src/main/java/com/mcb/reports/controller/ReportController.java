@@ -1,12 +1,11 @@
 package com.mcb.reports.controller;
 
+import com.mcb.reports.dto.SearchParamsDTO;
 import com.mcb.reports.entities.views.PvsValuationRequestViews;
 import com.mcb.reports.service.ReportService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -18,11 +17,12 @@ public class ReportController {
 
     private final ReportService reportService;
 
-    @GetMapping("/pvs-valuation-request")
-    public List<PvsValuationRequestViews> searchPropertyValuations(
-            @RequestParam(name = "reference", required = false) String reference,
-            @RequestParam(name = "createdAt", required = false) LocalDateTime createdAt,
-            @RequestParam(name = "fosRef", required = false) String fosRef) {
+    @PostMapping("/pvs-valuation-request")
+    public List<PvsValuationRequestViews> searchPropertyValuations(@RequestBody SearchParamsDTO searchParamsDTO) {
+        String reference = searchParamsDTO.getReference();
+        LocalDateTime createdAt = searchParamsDTO.getCreatedAt();
+        String fosRef = searchParamsDTO.getFosRef();
+
         return reportService.searchPropertyValuations(reference, createdAt, fosRef);
     }
 }

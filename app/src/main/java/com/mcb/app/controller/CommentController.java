@@ -4,6 +4,8 @@ package com.mcb.app.controller;
 import com.mcb.app.service.CommentService;
 import com.mcb.commons.dto.CommentDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +19,8 @@ public class CommentController {
 
     @PostMapping
     public CommentDto saveComment(@RequestBody CommentDto comment) {
+        String username = getLoggedInUsername();
+        comment.setUsername(username);
         return commentService.saveComment(comment);
     }
 
@@ -24,6 +28,12 @@ public class CommentController {
     public CommentDto getCommentById(@PathVariable Long id) {
         return commentService.getCommentById(id);
     }
+
+    @GetMapping("/propertyId/{propertyId}")
+    public List<CommentDto> getCommentByPropertyId(@PathVariable Long propertyId) {
+        return commentService.getCommentByPropertyId(propertyId);
+    }
+
 
     @GetMapping("/user/{username}")
     public List<CommentDto> getAllCommentsByUser(@PathVariable String username) {
@@ -40,5 +50,11 @@ public class CommentController {
     @DeleteMapping("/{id}")
     public void deleteComment(@PathVariable Long id) {
         commentService.deleteComment(id);
+    }
+
+
+    private String getLoggedInUsername() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return authentication.getName();
     }
 }

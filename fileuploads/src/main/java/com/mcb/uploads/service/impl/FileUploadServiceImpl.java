@@ -7,10 +7,13 @@ import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 import com.amazonaws.util.IOUtils;
 import com.mcb.commons.entities.FileUpload;
+import com.mcb.commons.entities.PropertyValuation;
 import com.mcb.commons.entities.User;
 import com.mcb.commons.enums.DocumentType;
+import com.mcb.commons.exception.ResourceNotFoundException;
 import com.mcb.uploads.dto.FileUploadDto;
 import com.mcb.uploads.repository.FileUploadRepository;
+import com.mcb.uploads.repository.PropertyValuationRepository;
 import com.mcb.uploads.repository.UserRepository;
 import com.mcb.uploads.service.FileUploadService;
 import lombok.RequiredArgsConstructor;
@@ -27,6 +30,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -42,6 +46,8 @@ public class FileUploadServiceImpl implements FileUploadService {
 
     private final UserRepository userRepository;
 
+    private final PropertyValuationRepository propertyValuationRepository;
+
     @Override
     @Transactional
     public FileUploadDto uploadFile(MultipartFile file,
@@ -52,17 +58,21 @@ public class FileUploadServiceImpl implements FileUploadService {
         try {
             // Upload the file to S3
 
-            User user = userRepository.findByUsername(username).orElseThrow(()-> new UsernameNotFoundException("User Not Found"));
+            User user = userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User Not Found"));
 
 
             String modifiedName = Objects.requireNonNull(file.getOriginalFilename()).replaceAll("\\s+", "");
             String s3Url = uploadToS3(file);
+
+            PropertyValuation propertyValuation = propertyValuationRepository
+                    .findById(propertyValuationId).orElseThrow(() -> new ResourceNotFoundException("property not found"));
 
             FileUpload fileUpload = FileUpload.builder()
                     .documentType(documentType)
                     .fileSize(file.getSize())
                     .fileName(modifiedName)
                     .uploadedBy(user)
+                    .propertyValuation(propertyValuation)
                     .uploadedDate(LocalDateTime.now(ZoneOffset.UTC))
                     .build();
 
@@ -89,6 +99,13 @@ public class FileUploadServiceImpl implements FileUploadService {
             e.printStackTrace();
             throw new RuntimeException("Error downloading file from S3");
         }
+    }
+
+    @Override
+    public List<FileUploadDto> getAllFileUploadsByUserNameAndPropertyId(String username, Long propertyId) {
+        User user = userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        return fileUploadRepository.findFileUploadsByUploadedByAndPropertyId(user.getId(), propertyId)
+                .stream().map(this::mapToFileUploadDto).collect(Collectors.toList());
     }
 
     private String uploadToS3(MultipartFile file) {
@@ -123,8 +140,11 @@ public class FileUploadServiceImpl implements FileUploadService {
     }
 
     @Override
-    public List<FileUpload> getAllFileUploads() {
-        return fileUploadRepository.findAll();
+    public List<FileUploadDto> getAllFileUploads() {
+        return fileUploadRepository.findAll()
+                .stream()
+                .map(this::mapToFileUploadDto)
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -139,6 +159,8 @@ public class FileUploadServiceImpl implements FileUploadService {
         fileUploadDto.setFileSize(upload.getFileSize());
         fileUploadDto.setFileName(upload.getFileName());
         fileUploadDto.setUploadedDate(upload.getUploadedDate());
+        fileUploadDto.setPropertyValuationId(upload.getPropertyValuation().getId());
+        fileUploadDto.setUploadedBy(upload.getUploadedBy().getName());
         return fileUploadDto;
     }
 }

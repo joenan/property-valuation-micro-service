@@ -1,7 +1,6 @@
 package com.mcb.uploads.controller;
 
 
-import com.mcb.commons.entities.FileUpload;
 import com.mcb.commons.enums.DocumentType;
 import com.mcb.uploads.dto.FileUploadDto;
 import com.mcb.uploads.service.FileUploadService;
@@ -23,7 +22,6 @@ public class FileUploadController {
 
     private final FileUploadService fileUploadService;
 
-
     @PostMapping
     public ResponseEntity<FileUploadDto> uploadFile(@RequestParam("file") MultipartFile file,
                                                     @RequestParam("documentType") DocumentType documentType,
@@ -37,7 +35,7 @@ public class FileUploadController {
 
     @GetMapping("/download/{fileId}")
     public ResponseEntity<byte[]> downloadFile(@PathVariable Long fileId) {
-        // Get file information from the service
+
         FileUploadDto fileUploadDto = fileUploadService.getFileUploadById(fileId);
 
         // Download the file from S3 using the service method
@@ -45,14 +43,23 @@ public class FileUploadController {
 
         // Set up the response headers
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
-        headers.setContentDispositionFormData("attachment", fileUploadDto.getFileName());
 
-        // Return the file content in the response body
+        // Extract the file extension from the file name
+        String fileName = fileUploadDto.getFileName();
+        String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
+
+        // Append the file extension to the file name for Content-Disposition
+        headers.setContentDispositionFormData("attachment", fileName);
+        headers.set("Content-Type", "application/" + fileExtension);
+        headers.setContentLength(fileContent.length);
+
+
         return ResponseEntity.ok()
                 .headers(headers)
                 .body(fileContent);
     }
+
+
 
     @GetMapping("/{id}")
     public ResponseEntity<FileUploadDto> getFileUploadById(@PathVariable Long id) {
@@ -60,8 +67,14 @@ public class FileUploadController {
         return ResponseEntity.ok(fileUploadDto);
     }
     @GetMapping
-    public List<FileUpload> getAllFileUploads() {
+    public List<FileUploadDto> getAllFileUploads() {
         return fileUploadService.getAllFileUploads();
+    }
+
+    @GetMapping("/property/{propertyId}")
+    public List<FileUploadDto> getAllFileUploadsByUserIdAndPropertyId(@PathVariable Long propertyId) {
+        String username = getLoggedInUsername();
+        return fileUploadService.getAllFileUploadsByUserNameAndPropertyId(username, propertyId);
     }
 
     @DeleteMapping("/{id}")

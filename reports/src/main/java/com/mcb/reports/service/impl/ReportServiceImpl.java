@@ -6,9 +6,9 @@ import com.mcb.reports.service.ReportService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -26,14 +26,15 @@ public class ReportServiceImpl implements ReportService {
                     PvsValuationRequestViews pvsValuationRequestViews = new PvsValuationRequestViews();
                     pvsValuationRequestViews.setId((Long) row[0]);
                     pvsValuationRequestViews.setReference((String) row[1]);
-                    pvsValuationRequestViews.setReceivedOn((LocalDateTime) row[2]);
+                    pvsValuationRequestViews.setReceivedOn(((Timestamp) row[2]).toLocalDateTime());
                     pvsValuationRequestViews.setBorrowersName((String) row[3]);
                     pvsValuationRequestViews.setFosRef((String) row[4]);
-                    pvsValuationRequestViews.setCreatedOn((LocalDateTime) row[5]);
-                    pvsValuationRequestViews.setModifiedOn((LocalDateTime) row[6]);
+                    pvsValuationRequestViews.setCreatedOn(((Timestamp) row[5]).toLocalDateTime());
+                    pvsValuationRequestViews.setModifiedOn(((Timestamp) row[6]).toLocalDateTime());
                     return pvsValuationRequestViews;
                 })
                 .toList();
+
 
         return pvsValuationRequestViewsList;
     }

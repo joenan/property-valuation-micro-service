@@ -13,6 +13,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,6 +26,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDto saveCustomer(CustomerDto customerDto) {
+        customerDto.setCustomerNumber(generateCustomerNumber());
         Customer savedCustomer = customerRepository.save(customerConverter.toCustomer(customerDto));
         return customerConverter.toCustomerDto(savedCustomer);
     }
@@ -55,4 +57,9 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.deleteByCustomerNumber(customerNumber);
     }
 
+    private static String generateCustomerNumber() {
+        Random random = new Random();
+        // Generate a random number in the range [1000000000, 9999999999]
+        return String.valueOf((long) (1000000000 + random.nextDouble() * 9000000000L));
+    }
 }

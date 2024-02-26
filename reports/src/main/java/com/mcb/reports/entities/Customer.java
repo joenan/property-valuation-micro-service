@@ -3,6 +3,7 @@ package com.mcb.reports.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 @Entity

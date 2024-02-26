@@ -17,4 +17,6 @@ public class FileUploadDto {
     private long fileSize;
     private String fileName;
     private LocalDateTime uploadedDate;
+    private String uploadedBy;
+    private long propertyValuationId;
 }

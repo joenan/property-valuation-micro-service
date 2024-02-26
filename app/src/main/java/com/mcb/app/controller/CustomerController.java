@@ -3,6 +3,7 @@ package com.mcb.app.controller;
 
 import com.mcb.app.service.CustomerService;
 import com.mcb.commons.dto.CustomerDto;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @PostMapping
-    public CustomerDto saveCustomer(@RequestBody CustomerDto customer) {
+    public CustomerDto saveCustomer(@RequestBody @Valid CustomerDto customer) {
         return customerService.saveCustomer(customer);
     }
 

@@ -2,6 +2,7 @@ package com.mcb.app.service.impl;
 
 import com.mcb.app.converter.CustomerConverter;
 import com.mcb.app.converter.PropertyValuationConverter;
+import com.mcb.app.repository.CustomerRepository;
 import com.mcb.app.repository.FacilityDetailsRepository;
 import com.mcb.app.repository.PropertyValuationRepository;
 import com.mcb.app.service.PropertyValuationService;
@@ -36,12 +37,25 @@ public class PropertyValuationServiceImpl implements PropertyValuationService {
 
     private final CustomerConverter customerConverter;
 
+    private final CustomerRepository customerRepository;
+
     @Override
     public PropertyValuationDto savePropertyValuation(PropertyValuationDto request) {
 
 
         List<Customer> borrowers = request.getBorrowers().stream()
-                .map(customerConverter::toCustomer)
+                .map(borrower -> {
+
+                    String customerNumber = borrower.getCustomerNumber();
+
+                    Optional<Customer> customerOptional = customerRepository.findByCustomerNumber(customerNumber);
+                    if (customerOptional.isPresent()) {
+                        return customerOptional.get();
+                    } else {
+
+                        throw new ResourceNotFoundException("Customer with customerNumber " + customerNumber + " not found");
+                    }
+                })
                 .collect(Collectors.toList());
 
         FacilityDetails facilityDetails = new FacilityDetails();
@@ -62,7 +76,9 @@ public class PropertyValuationServiceImpl implements PropertyValuationService {
 
         facilityDetailsRepository.save(facilityDetails);
 
-        return valuationConverter.toPropertyValuationDto(propertyValuationRepository.save(propertyValuation));
+        PropertyValuationDto dto = valuationConverter.toPropertyValuationDto(propertyValuationRepository.save(propertyValuation));
+
+        return dto;
     }
 
     @Override
