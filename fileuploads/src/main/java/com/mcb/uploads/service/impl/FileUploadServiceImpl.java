@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -44,6 +45,8 @@ public class FileUploadServiceImpl implements FileUploadService {
     @Value("${aws.s3.bucket.name}")
     private String BUCKET_NAME;
 
+    private static final long MAX_FILE_SIZE_BYTES = 3 * 1024 * 1024; // 3MB in bytes
+
     private final UserRepository userRepository;
 
     private final PropertyValuationRepository propertyValuationRepository;
@@ -56,20 +59,37 @@ public class FileUploadServiceImpl implements FileUploadService {
                                     Long propertyValuationId,
                                     String username) {
         try {
+
+            // Check file size
+            if (file.getSize() > MAX_FILE_SIZE_BYTES) {
+                throw new IllegalArgumentException("File size exceeds the allowed limit (3MB)");
+            }
+
+            // Check allowed file types
+            String originalFilename = Objects.requireNonNull(file.getOriginalFilename());
+            String fileExtension = getFileExtension(originalFilename).toLowerCase();
+            List<String> allowedExtensions = Arrays.asList("pdf", "doc", "docx", "jpg", "png");
+
+            if (!allowedExtensions.contains(fileExtension)) {
+                throw new IllegalArgumentException("Only these file types are allowed" +allowedExtensions);
+            }
+
             // Upload the file to S3
+            User user = userRepository.findByUsername(username)
+                    .orElseThrow(() -> new UsernameNotFoundException("User Not Found"));
 
-            User user = userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User Not Found"));
-
-
-            String modifiedName = Objects.requireNonNull(file.getOriginalFilename()).replaceAll("\\s+", "");
+            String modifiedName = originalFilename.replaceAll("\\s+", "");
             String s3Url = uploadToS3(file);
 
             PropertyValuation propertyValuation = propertyValuationRepository
-                    .findById(propertyValuationId).orElseThrow(() -> new ResourceNotFoundException("property not found"));
+                    .findById(propertyValuationId)
+                    .orElseThrow(() -> new ResourceNotFoundException("Property not found"));
+
+            String fileSizeWithUnit = calculateFileSizeWithUnit(file.getSize());
 
             FileUpload fileUpload = FileUpload.builder()
                     .documentType(documentType)
-                    .fileSize(file.getSize())
+                    .fileSize(fileSizeWithUnit)
                     .fileName(modifiedName)
                     .uploadedBy(user)
                     .propertyValuation(propertyValuation)
@@ -78,13 +98,38 @@ public class FileUploadServiceImpl implements FileUploadService {
 
             FileUpload savedFile = fileUploadRepository.save(fileUpload);
 
-            return mapToFileUploadDto(savedFile);
+            FileUploadDto fileUploadDto = mapToFileUploadDto(savedFile);
+
+            return fileUploadDto;
 
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Error uploading file");
         }
     }
+
+    private String getFileExtension(String filename) {
+        int lastDotIndex = filename.lastIndexOf('.');
+        if (lastDotIndex == -1) {
+            throw new IllegalArgumentException("File has no extension");
+        }
+        return filename.substring(lastDotIndex + 1);
+    }
+
+    private String calculateFileSizeWithUnit(long fileSizeInBytes) {
+        double fileSizeInKB = fileSizeInBytes / 1024.0;
+        double fileSizeInMB = fileSizeInKB / 1024.0;
+        double fileSizeInGB = fileSizeInMB / 1024.0;
+
+        if (fileSizeInGB >= 1) {
+            return String.format("%.2f GB", fileSizeInGB);
+        } else if (fileSizeInMB >= 1) {
+            return String.format("%.2f MB", fileSizeInMB);
+        } else {
+            return String.format("%.2f KB", fileSizeInKB);
+        }
+    }
+
 
     @Override
     public byte[] download(String fileName) {

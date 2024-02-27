@@ -21,7 +21,7 @@ public class FileUpload implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private DocumentType documentType;
-    private long fileSize;
+    private String fileSize;
     private String fileName;
     @ManyToOne
     @JoinColumn(name = "user_id")

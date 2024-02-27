@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class FileUploadDto {
     private Long id;
     private DocumentType documentType;
-    private long fileSize;
+    private String fileSize;
     private String fileName;
     private LocalDateTime uploadedDate;
     private String uploadedBy;
