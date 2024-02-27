@@ -47,7 +47,7 @@ public class PropertyValuation implements Serializable {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Customer> borrowers;
 
     @OneToOne

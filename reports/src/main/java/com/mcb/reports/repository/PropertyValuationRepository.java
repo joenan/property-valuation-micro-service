@@ -1,6 +1,7 @@
 package com.mcb.reports.repository;
 
-import com.mcb.reports.entities.views.PvsValuationRequestViews;
+
+import com.mcb.commons.entities.PvsValuationRequestViews;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

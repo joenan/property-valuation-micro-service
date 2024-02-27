@@ -1,4 +1,4 @@
-package com.mcb.reports.dto;
+package com.mcb.commons.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
 package com.mcb.reports.repository;
 
 
-import com.mcb.reports.entities.User;
+import com.mcb.commons.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

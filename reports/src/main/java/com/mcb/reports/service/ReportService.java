@@ -1,5 +1,7 @@
 package com.mcb.reports.service;
-import com.mcb.reports.entities.views.PvsValuationRequestViews;
+
+
+import com.mcb.commons.entities.PvsValuationRequestViews;
 
 import java.time.LocalDateTime;
 import java.util.List;

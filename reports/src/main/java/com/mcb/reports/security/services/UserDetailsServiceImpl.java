@@ -1,6 +1,6 @@
 package com.mcb.reports.security.services;
 
-import com.mcb.reports.entities.User;
+import com.mcb.commons.entities.User;
 import com.mcb.reports.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

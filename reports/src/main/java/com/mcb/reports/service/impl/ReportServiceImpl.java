@@ -1,6 +1,7 @@
 package com.mcb.reports.service.impl;
 
-import com.mcb.reports.entities.views.PvsValuationRequestViews;
+
+import com.mcb.commons.entities.PvsValuationRequestViews;
 import com.mcb.reports.repository.PropertyValuationRepository;
 import com.mcb.reports.service.ReportService;
 import lombok.RequiredArgsConstructor;

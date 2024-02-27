@@ -1,14 +1,18 @@
 package com.mcb.reports.controller;
 
-import com.mcb.reports.dto.SearchParamsDTO;
-import com.mcb.reports.entities.views.PvsValuationRequestViews;
+
+import com.mcb.commons.dto.SearchParamsDTO;
+import com.mcb.commons.entities.PvsValuationRequestViews;
 import com.mcb.reports.service.ReportService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/reports/")

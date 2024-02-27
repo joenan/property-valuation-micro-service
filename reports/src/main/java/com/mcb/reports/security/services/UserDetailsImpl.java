@@ -1,7 +1,7 @@
 package com.mcb.reports.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.mcb.reports.entities.User;
+import com.mcb.commons.entities.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

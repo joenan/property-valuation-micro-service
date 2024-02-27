@@ -1,4 +1,4 @@
-package com.mcb.reports.entities.views;
+package com.mcb.commons.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
